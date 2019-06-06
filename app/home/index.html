@@ -1,0 +1,99 @@
+﻿<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }   
+            .lis{
+                padding: 20px;
+                float: left;
+            }     
+            li a{
+                color: rgb(143, 142, 142);
+            }
+            li a:hover{
+                text-decoration: none;
+                color: black;
+            }  
+            img{
+                height: 300px;
+                width: 200px;
+                border-radius: 20px;
+            }
+            #newline{
+                clear:both;
+            }
+            .content {
+                max-width: 740px;
+                margin: auto;
+                background: white;
+                padding: 10px;
+            }
+            input[type=text] {
+                width: 204px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+                background-image: url('http://www.icons101.com/icon_png/size_512/id_49738/search.png');
+                background-size: 30px;
+                background-position: 10px 10px; 
+                background-repeat: no-repeat;
+                padding: 12px 20px 12px 40px;
+                -webkit-transition: width 0.4s ease-in-out;
+                transition: width 0.4s ease-in-out;
+            }
+
+            input[type=text]:focus {
+                width: 100%;
+            }
+
+            h1 {
+                text-shadow: 0 0 30px rgb(247, 235, 235), 0 0 10px rgb(0, 2, 5);
+            }
+
+        </style>
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("ul");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hi {{vm.user.firstName}}!!</h1>
+
+        <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for movies..." title="Type in a name"></center>
+            <ul id = "ul" class="content">
+                <li class="lis"><a href="/app/endgame"><img class="img1" src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"><br/><center>Avengers: Endgame</center></a></li>
+                <li class="lis"><a href="/app/black-panther"><img src="https://i.pinimg.com/736x/ec/2a/82/ec2a8266cd7727c06c36bfc763b25877.jpg"><br/><center>Black Panther</center></a></li>
+                <li class="lis"><a href="/app/captain-marvel"><img src="https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_.jpg"><br/><center>Captain Marvel</center></a></li>
+                <li class="lis" id="newline"><a href="/app/deadpool"><img src="https://i.pinimg.com/736x/d0/c5/7a/d0c57a5849ce31929c74cd7885ec8703.jpg"><br/><center>Deadpool</center></a></li>
+                <li class="lis"><a href="/app/terminator"><img src="https://i.pinimg.com/736x/54/7d/d3/547dd37da6f131a3fb5beb98ce857051.jpg"><br/><center>Terminator</center></a></li>
+                <li class="lis"><a href="/app/rampage"><img src="http://w2w-images.sftcdn.net/image/upload/t_cover/movies/rampage-2018/rampage-2018-cover.jpg"><br/><center>Rampage</center></a></li>
+            </ul>
+        
+    </body>
+</html>
+
+
+
+
+    

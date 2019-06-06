@@ -1,0 +1,28 @@
+{
+    "name": "moviedevil",
+    "version": "1.0.0",
+    "description": "Online Movie Streaming",
+    "scripts": {
+        "start:server": "nodemon server.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.1.0",
+        "body-parser": "^1.13.2",
+        "ejs": "^2.3.3",
+        "express": "^4.16.4",
+        "express-jwt": "^3.0.1",
+        "express-session": "^1.11.3",
+        "jsonwebtoken": "^5.0.2",
+        "lodash": "^3.10.0",
+        "mongodb": "^2.1.16",
+        "mongoose": "^5.5.2",
+        "mongoskin": "^2.1.0",
+        "monk": "^6.0.6",
+        "q": "^1.4.1",
+        "request": "^2.58.0",
+        "rootpath": "^0.1.2"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.11"
+    }
+}
